@@ -5,5 +5,5 @@ export default function Loading() {
     <div className="w-full min-h-screen flex items-center justify-center">
       <Loader />
     </div>
-  )
+  );
 }

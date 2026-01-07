@@ -1,18 +1,17 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Link from 'next/link';
-import { cn } from '@/lib/utils';
+import React from "react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
-type Variant = 'primary' | 'secondary' | 'outline';
+type Variant = "primary" | "secondary" | "outline";
 
 const VARIANT_CLASSES: Record<Variant, string> = {
   primary:
-    'text-white bg-primary-500 hover:bg-primary-400 focus:ring-primary-500',
-  secondary:
-    'bg-secondary-200 hover:bg-secondary-100 focus:ring-secondary-100',
+    "text-white bg-primary-500 hover:bg-primary-400 focus:ring-primary-500",
+  secondary: "bg-secondary-200 hover:bg-secondary-100 focus:ring-secondary-100",
   outline:
-    'border border-secondary-200 hover:bg-secondary-50 focus:ring-secondary-200',
+    "border border-secondary-200 hover:bg-secondary-50 focus:ring-secondary-200",
 };
 
 type ButtonBaseProps = {
@@ -38,18 +37,14 @@ type ButtonProps = ButtonAsButton | ButtonAsLink;
 const Button = ({
   children,
   className,
-  variant = 'primary',
+  variant = "primary",
   isLink,
   ...rest
 }: ButtonProps) => {
   const baseClasses =
-    'inline-flex cursor-pointer items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50';
+    "inline-flex cursor-pointer items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
 
-  const classes = cn(
-    baseClasses,
-    VARIANT_CLASSES[variant],
-    className
-  );
+  const classes = cn(baseClasses, VARIANT_CLASSES[variant], className);
 
   if (isLink) {
     const { href, ...linkProps } = rest as ButtonAsLink;
