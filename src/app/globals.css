@@ -1,47 +1,52 @@
 @import "tailwindcss";
 
-@theme{
-    --color-primary-50: #ffe5c6;
-    --color-primary-100: #ffd49f;
-    --color-primary-200: #ffbe7d;
-    --color-primary-300: #ff9d4a;
-    --color-primary-400: #ff7a1c;
-    --color-primary-500: #ff5a00;
-    --color-primary-600: #e65100;
-    --color-primary-700: #cc4800;
-    --color-primary-800: #b34100;
-    --color-primary-900: #993800;
+@theme {
+  --color-primary-50: #ffe5c6;
+  --color-primary-100: #ffd49f;
+  --color-primary-200: #ffbe7d;
+  --color-primary-300: #ff9d4a;
+  --color-primary-400: #ff7a1c;
+  --color-primary-500: #ff5a00;
+  --color-primary-600: #e65100;
+  --color-primary-700: #cc4800;
+  --color-primary-800: #b34100;
+  --color-primary-900: #993800;
 
-    --color-secondary-50: ##f2f2f2;
-    --color-secondary-100: ##d7d7d7;
-    --color-secondary-200: ##bdbdbd;
-    --color-secondary-300: ##a3a3a3;
-    --color-secondary-400: ##8a8a8a;
-    --color-secondary-500: ##707070;
-    --color-secondary-600: ##575757;
-    --color-secondary-700: ##3e3e3e;
-    --color-secondary-800: ##262626;
-    --color-secondary-900: ##0d0d0d;
+  --color-secondary-50: ##f2f2f2;
+  --color-secondary-100: ##d7d7d7;
+  --color-secondary-200: ##bdbdbd;
+  --color-secondary-300: ##a3a3a3;
+  --color-secondary-400: ##8a8a8a;
+  --color-secondary-500: ##707070;
+  --color-secondary-600: ##575757;
+  --color-secondary-700: ##3e3e3e;
+  --color-secondary-800: ##262626;
+  --color-secondary-900: ##0d0d0d;
 }
 
-.wrapper{
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+.wrapper {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }
 
 .loader {
-        height: 30px;
-        width: 10px;
-        border-radius: 4px;
-        color: #ff7a1c;
-        background: currentColor;
-        position: relative;
-        animation: ht 1s ease-in infinite alternate;
-        box-shadow: 15px 0 0 -1px , -15px 0 0 -1px ,
-                    30px 0 0 -2px , -30px 0 0 -2px,
-                    45px 0 0 -3px , -45px 0 0 -3px;
-      }
+  height: 30px;
+  width: 10px;
+  border-radius: 4px;
+  color: #ff7a1c;
+  background: currentColor;
+  position: relative;
+  animation: ht 1s ease-in infinite alternate;
+  box-shadow:
+    15px 0 0 -1px,
+    -15px 0 0 -1px,
+    30px 0 0 -2px,
+    -30px 0 0 -2px,
+    45px 0 0 -3px,
+    -45px 0 0 -3px;
+}
 
-      @keyframes ht {
-        100% { height: 0px }
-      }
-    
+@keyframes ht {
+  100% {
+    height: 0px;
+  }
+}

@@ -4,14 +4,15 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 type Props = {
-     reset?: () => void
-     error?: Error;
-    };
+  reset?: () => void;
+  error?: Error;
+};
 
 export default function ErrorComponent({ reset, error }: Props) {
   console.log("🚀 ~ ErrorComponent ~ error:", error);
   const router = useRouter();
-  const sharedClassNames= "px-4 py-2 rounded-md transition duration-200 cursor-pointer";
+  const sharedClassNames =
+    "px-4 py-2 rounded-md transition duration-200 cursor-pointer";
 
   return (
     <div className="w-full min-h-screen bg-white flex items-center justify-center">
@@ -27,7 +28,10 @@ export default function ErrorComponent({ reset, error }: Props) {
           >
             Try again
           </button>
-          <Link href="/" className={`${sharedClassNames} border border-secondary-100`}>
+          <Link
+            href="/"
+            className={`${sharedClassNames} border border-secondary-100`}
+          >
             Go home
           </Link>
         </div>
