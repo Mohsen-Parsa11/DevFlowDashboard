@@ -18,6 +18,9 @@ const eslintConfig = defineConfig([
       // remove unused imports automatically
       "unused-imports/no-unused-imports": "error",
 
+      // FIXED: Merge both prettier entries into this one
+      "prettier/prettier": ["warn", { endOfLine: "auto" }],
+
       // warn on unused vars but allow _ignored
       "unused-imports/no-unused-vars": [
         "warn",
@@ -28,9 +31,6 @@ const eslintConfig = defineConfig([
           argsIgnorePattern: "^_",
         },
       ],
-
-      // prettier formatting errors show in eslint
-      "prettier/prettier": "warn",
     },
   },
 
