@@ -12,7 +12,10 @@ export default function Navbar() {
           width={24}
           height={24}
         />
-        <h3 className="font-semibold text-primary-400">DevFlow</h3>
+        <h3 className="text-lg font-semibold">
+          Dev
+          <span className="text-primary-400">Flow</span>
+        </h3>
       </Link>
       <div className="">global search</div>
       <span>
