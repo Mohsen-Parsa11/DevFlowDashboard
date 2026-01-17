@@ -1,10 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { auth, signOut } from "../../../auth";
+import { signOut } from "../../../auth";
 import ROUTES from "@/constants/route";
 
 export default async function HomePage() {
-  const session = await auth();
-  console.log("🚀 ~ HomePage ~ session:", session);
   return (
     <div>
       <h2>Hello, Welcome to the Next js world!</h2>
