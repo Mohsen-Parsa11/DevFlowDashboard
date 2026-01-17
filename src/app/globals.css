@@ -172,3 +172,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+.bg-auth-dark {
+  background-image: url("/images/auth-dark.png");
+}
+.bg-auth-light {
+  background-image: url("/images/auth-light.png");
+}
