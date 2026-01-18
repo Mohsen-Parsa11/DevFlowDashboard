@@ -22,7 +22,7 @@ export default function SocialAuthForm() {
     }
   };
   return (
-    <div className="flex gap-2 items-center mt-10">
+    <div className="flex flex-col sm:flex-row gap-2 items-center mt-10">
       <Button
         onClick={() => handleSignIn("github")}
         className="rounded flex-1 bg-slate-800 text-white cursor-pointer hover:bg-slate-800/80"
