@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Theme } from "./Theme";
+import { MobileNav } from "@/components/mobile-nav/MobileNav";
 
 export default function Navbar() {
   return (
@@ -21,6 +22,7 @@ export default function Navbar() {
       <span>
         <Theme />
       </span>
+      <MobileNav />
     </nav>
   );
 }
