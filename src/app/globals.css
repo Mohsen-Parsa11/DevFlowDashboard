@@ -27,6 +27,10 @@
   --color-secondary-900: ##0d0d0d;
 }
 
+.primary_gradient {
+  @apply bg-linear-90 from-primary-400 to-primary-500;
+}
+
 .wrapper {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
 }

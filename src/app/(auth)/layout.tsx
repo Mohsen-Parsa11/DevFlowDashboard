@@ -8,8 +8,8 @@ export default function AuthLayout({
 }) {
   return (
     <main className="w-full min-h-screen flex items-center justify-center bg-auth-dark dark:bg-auth-light bg-center bg-cover bg-no-repeat px-4 py-10">
-      <section className="bg-slate-900 p-7 rounded-md space-y-4 min-w-full md:min-w-sm">
-        <div className="flex items-center justify-between gap-5">
+      <section className="bg-slate-900 p-7 rounded-lg space-y-4 min-w-full md:min-w-sm">
+        <div className="flex items-center justify-between gap-5 pb-3">
           <div className="flex flex-col gap-1">
             <h1 className="text-xl font-semibold text-white">Join DevFlow</h1>
             <p className="text-gray-400 text-sm md:text-base">
