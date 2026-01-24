@@ -5,7 +5,7 @@ import { Theme } from "../Theme";
 
 export default function Navbar() {
   return (
-    <nav className="wrapper py-4 flex items-center justify-between">
+    <nav className="wrapper py-4 flex items-center justify-between bg-slate-900">
       <Link href="/" className="flex gap-1 items-center">
         <Image
           src="/images/site-logo.svg"

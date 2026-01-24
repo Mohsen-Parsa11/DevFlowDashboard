@@ -22,7 +22,7 @@ export default function SidebarNavLinks() {
                   isActive && "primary_gradient",
                 )}
               >
-                <nav.icon className="size-7" />
+                <nav.icon className="size-5" />
                 <span>{nav.label}</span>
               </li>
             </Link>

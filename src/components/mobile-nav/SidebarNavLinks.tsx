@@ -22,7 +22,7 @@ export default function SidebarNavLinks() {
                 className="
                       flex gap-4 text-white items-center"
               >
-                <nav.icon className="size-7" />
+                <nav.icon className="size-5" />
                 <span>{nav.label}</span>
               </Link>
             </li>
