@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { SheetClose } from "../ui/sheet";
 import { cn } from "@/lib/utils";
@@ -13,19 +14,18 @@ export default function SidebarNavLinks() {
         const isActive = nav.href == pathName;
 
         return (
-          <SheetClose key={nav.id}>
-            <li
-              className={cn("p-3 rounded-lg", isActive && "primary_gradient")}
-            >
-              <Link
-                href={nav.href}
-                className="
-                      flex gap-4 text-white items-center"
+          <SheetClose asChild key={nav.id}>
+            <Link href={nav.href}>
+              <li
+                className={cn(
+                  "p-3 rounded-lg flex gap-4 text-white items-center",
+                  isActive && "primary_gradient",
+                )}
               >
                 <nav.icon className="size-5" />
                 <span>{nav.label}</span>
-              </Link>
-            </li>
+              </li>
+            </Link>
           </SheetClose>
         );
       })}
