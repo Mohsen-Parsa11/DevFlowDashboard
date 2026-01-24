@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Theme } from "./Theme";
 import { MobileNav } from "@/components/mobile-nav/MobileNav";
+import { Theme } from "../Theme";
 
 export default function Navbar() {
   return (
