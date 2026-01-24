@@ -1,49 +1,61 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetFooter,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "../ui/button";
+import ROUTES from "@/constants/route";
+import SidebarNavLinks from "./SidebarNavLinks";
 
 export function MobileNav() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline">Open</Button>
+        <Button
+          variant="outline"
+          className="size-9 rounded-md cursor-pointer md:hidden"
+        >
+          <Menu className="size-5" />
+        </Button>
       </SheetTrigger>
-      <SheetContent side="left">
+      <SheetContent side="left" className=" overflow-y-auto">
         <SheetHeader>
-          <SheetTitle>Edit profile</SheetTitle>
-          <SheetDescription>
-            Make changes to your profile here. Click save when you&apos;re done.
-          </SheetDescription>
+          <SheetTitle>
+            <Link href="/" className="flex gap-1 items-center">
+              <Image
+                src="/images/site-logo.svg"
+                alt="DevFlow Logo"
+                width={24}
+                height={24}
+              />
+              <h3 className="text-lg font-semibold">
+                Dev
+                <span className="text-primary-400">Flow</span>
+              </h3>
+            </Link>
+          </SheetTitle>
         </SheetHeader>
-        <div className="grid flex-1 auto-rows-min gap-6 px-4">
-          <div className="grid gap-3">
-            <Label htmlFor="sheet-demo-name">Name</Label>
-            <Input id="sheet-demo-name" defaultValue="Pedro Duarte" />
-          </div>
-          <div className="grid gap-3">
-            <Label htmlFor="sheet-demo-username">Username</Label>
-            <Input id="sheet-demo-username" defaultValue="@peduarte" />
-          </div>
-        </div>
+
+        <SidebarNavLinks />
+
         <SheetFooter>
-          <Button className="bg-slate-800 hover:bg-slate-800/80 cursor-pointer border border-gray-700 text-primary-400 ">
-            log in
-          </Button>
+          <SheetClose asChild>
+            <Button className="bg-slate-800 hover:bg-slate-800/80 cursor-pointer border border-gray-700 text-primary-400 ">
+              <Link href={ROUTES.SIGN_IN}>log in</Link>
+            </Button>
+          </SheetClose>
           <SheetClose asChild>
             <Button variant="outline" className="cursor-pointer">
-              sign up
+              <Link href={ROUTES.SIGN_UP}>sign up</Link>
             </Button>
           </SheetClose>
         </SheetFooter>

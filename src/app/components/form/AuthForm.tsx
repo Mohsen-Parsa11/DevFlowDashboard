@@ -37,7 +37,7 @@ export default function AuthForm<T extends FieldValues>({
   const form = useForm<T>({
     resolver: zodResolver(
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      schema as unknown as z.ZodType<any, any, any>
+      schema as unknown as z.ZodType<any, any, any>,
     ) as unknown as Resolver<T>,
     defaultValues: defaultValues as DefaultValues<T>,
   });
@@ -61,7 +61,7 @@ export default function AuthForm<T extends FieldValues>({
                     required
                     type={field.name === "password" ? "password" : "text"}
                     {...field}
-                    className="px-4 py-2 rounded-md"
+                    className="px-4 py-2 rounded"
                   />
                 </FormControl>
               </FormItem>
@@ -71,7 +71,7 @@ export default function AuthForm<T extends FieldValues>({
 
         <Button
           disabled={form.formState.isSubmitting}
-          className="px-4 py-3 w-full rounded my-5 text-white bg-primary-600 hover:bg-primary-700 cursor-pointer transition-all duration-150"
+          className="px-4 py-3 w-full rounded my-5 text-white primary_gradient cursor-pointer transition-all duration-150"
         >
           {form.formState.isSubmitting
             ? buttonText === "Sign In"
@@ -81,7 +81,7 @@ export default function AuthForm<T extends FieldValues>({
         </Button>
         {formType === "SIGN_IN" ? (
           <p>
-            Dont have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link href={ROUTES.SIGN_UP} className="text-primary-400">
               Sign Up
             </Link>
